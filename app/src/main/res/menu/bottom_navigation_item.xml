@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bniHome"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/bniBazr"
+        android:icon="@drawable/ic_shopping"
+        android:title="Bazar" />
+    <item
+        android:id="@+id/binAndaj"
+        android:icon="@drawable/ic_explicit"
+        android:title="Andaj" />
+    <item
+        android:id="@+id/bniSevaDeneGhene"
+        android:icon="@drawable/ic_seva_dene_ghene"
+        android:title="Seva Dene Ghene" />
+    <item
+        android:id="@+id/bniPar"
+        android:icon="@drawable/ic_par"
+        android:title="Par" />
+</menu>
