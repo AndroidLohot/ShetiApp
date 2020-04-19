@@ -36,7 +36,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
         android:layout_marginTop="156dp"
-        android:text="sa'e"
+        android:text="sale"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sp_Select_Bazar_Option" />
 
