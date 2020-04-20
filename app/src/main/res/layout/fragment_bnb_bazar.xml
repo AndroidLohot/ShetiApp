@@ -11,11 +11,10 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="88dp"
         android:text="Bazar"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,9 +32,9 @@
         android:id="@+id/btn_Bazar_Sale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="228dp"
         android:text="sale"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sp_Select_Bazar_Option" />
@@ -44,10 +43,19 @@
         android:id="@+id/btn_Bazar_Bay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:text="bay"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_Select_Bazar_Option" />
+
+    <Spinner
+        android:id="@+id/sp_Select_Bazar_Option_2"
+        android:layout_width="317dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sp_Select_Bazar_Option" />
 </androidx.constraintlayout.widget.ConstraintLayout>
