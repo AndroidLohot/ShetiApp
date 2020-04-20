@@ -18,12 +18,20 @@ import java.util.ArrayList;
  */
 public class Bazar_Show_List extends Fragment {
 
+    private int positionKBP,positionJat;
+
     private ArrayList<String> arrayList;
 
 
 
     public Bazar_Show_List() {
         // Required empty public constructor
+    }
+
+    public Bazar_Show_List(int positionKBP, int positionJat) {
+
+        this.positionKBP=positionKBP;
+        this.positionJat=positionJat;
     }
 
 

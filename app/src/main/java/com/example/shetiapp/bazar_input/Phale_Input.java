@@ -16,9 +16,16 @@ import com.example.shetiapp.R;
  */
 public class Phale_Input extends Fragment {
 
+    private int positionJat;
+
 
     public Phale_Input() {
         // Required empty public constructor
+    }
+
+    public Phale_Input(int positionJat) {
+
+        this.positionJat=positionJat;
     }
 
 

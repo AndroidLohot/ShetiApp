@@ -16,9 +16,16 @@ import com.example.shetiapp.R;
  */
 public class Bhaji_Input extends Fragment {
 
+    private int positionJat;
+
 
     public Bhaji_Input() {
         // Required empty public constructor
+    }
+
+    public Bhaji_Input(int positionJat) {
+
+        this.positionJat=positionJat;
     }
 
 

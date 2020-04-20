@@ -11,13 +11,15 @@ import com.example.shetiapp.bazar_Output.Bazar_Show_List;
 
 public class Bazar_Baying_Activity extends AppCompatActivity {
 
+    private int positionKBP,positionJat;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bazar__baying_);
 
         FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
-                .replace(R.id.main_Baying_Frame,new Bazar_Show_List());
+                .replace(R.id.main_Baying_Frame,new Bazar_Show_List(positionKBP,positionJat));
         ft.commit();
 
 

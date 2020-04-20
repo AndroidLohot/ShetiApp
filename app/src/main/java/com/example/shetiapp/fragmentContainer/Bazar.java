@@ -145,7 +145,9 @@ public class Bazar extends Fragment {
                     {
 
                     Bundle bundle=new Bundle();
-                    bundle.putInt("position",positionKBP);
+
+                    bundle.putInt("positionKBP",positionKBP);
+                    bundle.putInt("positionJat",positionJat);
 
                     Intent intent=new Intent(view.getContext(),Bazar_Saling_Activity.class);
                     intent.putExtras(bundle);
@@ -169,7 +171,9 @@ public class Bazar extends Fragment {
                 {
 
                     Bundle bundle=new Bundle();
-                    bundle.putInt("position",positionKBP);
+
+                    bundle.putInt("positionKBP",positionKBP);
+                    bundle.putInt("positionJat",positionJat);
 
                     Intent intent=new Intent(view.getContext(), Bazar_Baying_Activity.class);
                     intent.putExtras(bundle);

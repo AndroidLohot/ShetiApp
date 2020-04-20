@@ -20,29 +20,30 @@ public class Bazar_Saling_Activity extends AppCompatActivity {
 
         Bundle bundle=getIntent().getExtras();
 
-        int position=bundle.getInt("position");
+        int positionKBP=bundle.getInt("positionKBP");
+        int positionJat=bundle.getInt("positionJat");
 
 
 
         FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
-                .replace(R.id.main_bazar,fragmentChoice(position));
+                .replace(R.id.main_bazar,fragmentChoice(positionKBP,positionJat));
         ft.commit();
     }
 
-    private Fragment fragmentChoice(int positionChoice) {
+    private Fragment fragmentChoice(int positionKBP,int positionJat) {
 
-        if (positionChoice==1) {
+        if (positionKBP==1) {
 
-            return new Kad_Dhany_Input();
-
-        }
-        else if (positionChoice==2) {
-
-            return new Bhaji_Input();
+            return new Kad_Dhany_Input(positionJat);
 
         }
+        else if (positionKBP==2) {
 
-        return new Phale_Input();
+            return new Bhaji_Input(positionJat);
+
+        }
+
+        return new Phale_Input(positionJat);
 
     }
 }
