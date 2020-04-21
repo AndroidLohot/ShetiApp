@@ -18,44 +18,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/sp_Select_Bazar_Option"
-        android:layout_width="328dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="84dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
     <Button
         android:id="@+id/btn_Bazar_Sale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="124dp"
         android:text="sale"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Bazar_Bay"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sp_Select_Bazar_Option" />
+        app:layout_constraintTop_toBottomOf="@+id/spChoiceProdect" />
 
     <Button
         android:id="@+id/btn_Bazar_Bay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
         android:text="bay"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sp_Select_Bazar_Option" />
+        app:layout_constraintTop_toBottomOf="@+id/spChoiceProdect" />
 
     <Spinner
-        android:id="@+id/sp_Select_Bazar_Option_2"
-        android:layout_width="317dp"
-        android:layout_height="38dp"
+        android:id="@+id/spChoiceKDB"
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sp_Select_Bazar_Option" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Spinner
+        android:id="@+id/spChoiceProdect"
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spChoiceKDB" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

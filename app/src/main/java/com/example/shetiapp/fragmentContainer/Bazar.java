@@ -26,17 +26,23 @@ import java.util.ArrayList;
  */
 public class Bazar extends Fragment {
 
-    private Spinner sp_Select_Bazar_Option,sp_Select_Bazar_Option_2;
+    private Spinner spChoiceKDB,spChoiceProdect;
     private Button btn_Bazar_Sale,btn_Bazar_Bay;
+
+    // this ArrayList and ArrayAddapter containing KD B P
     private ArrayList<String> arrayList_KBP;
     private ArrayAdapter<String> adapter_KBP;
 
-    private ArrayList<String> arrayList_Jat_K;
-    private ArrayList<String> arrayList1_Jat_B;
-    private ArrayList<String> arrayList1_Jat_P;
-    private ArrayAdapter<String> adapter_Jat;
+    // this ArrayList and ArrayAddapter containing prodect
+    private ArrayList<String> list_prodect_kd;
+    private ArrayList<String> list_prodect_p;
+    private ArrayList<String> list_prodect_b;
+    private ArrayAdapter<String> adapter_prodect;
 
-    private int positionKBP,positionJat;
+    // this variable containing the spinner position
+    private int positionKBP;
+    private int prodect;
+
 
     public Bazar() {
         // Required empty public constructor
@@ -44,8 +50,8 @@ public class Bazar extends Fragment {
 
     private void inView(View view) {
 
-        sp_Select_Bazar_Option=view.findViewById(R.id.sp_Select_Bazar_Option);
-        sp_Select_Bazar_Option_2=view.findViewById(R.id.sp_Select_Bazar_Option_2);
+        spChoiceKDB=view.findViewById(R.id.spChoiceKDB);
+        spChoiceProdect=view.findViewById(R.id.spChoiceProdect);
         btn_Bazar_Sale=view.findViewById(R.id.btn_Bazar_Sale);
         btn_Bazar_Bay=view.findViewById(R.id.btn_Bazar_Bay);
     }
@@ -58,59 +64,64 @@ public class Bazar extends Fragment {
 
         inView(view);
 
-        arrayList_KBP =new ArrayList<>();
 
-        arrayList_KBP.add("Choice select");
-        arrayList_KBP.add("Kad Dhany");
-        arrayList_KBP.add("Bhajay");
+
+        // this code chose prodect category
+        arrayList_KBP=new ArrayList<>();
+
+        arrayList_KBP.add("Chose your prodect");
+
+        arrayList_KBP.add("Kad Dhanay");
+        arrayList_KBP.add("Bhaji");
         arrayList_KBP.add("Phale");
 
-        adapter_KBP=new ArrayAdapter<>(view.getContext(),android.R.layout.simple_list_item_1, arrayList_KBP);
-        sp_Select_Bazar_Option.setAdapter(adapter_KBP);
+        adapter_KBP=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,arrayList_KBP);
+        spChoiceKDB.setAdapter(adapter_KBP);
 
+        // this code desplay the prodect
+        list_prodect_kd=new ArrayList<>();
+        list_prodect_b=new ArrayList<>();
+        list_prodect_p=new ArrayList<>();
 
-        arrayList_Jat_K=new ArrayList<>();
-        arrayList1_Jat_B=new ArrayList<>();
-        arrayList1_Jat_P=new ArrayList<>();
-
-        // this code select kad dhanay bhaji phale position
-        sp_Select_Bazar_Option.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spChoiceKDB.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 positionKBP=position;
 
-                if (position==1)
-                {
-                    // choice of Kad Dhanay Jat
-                    arrayList_Jat_K.add("Kad Dhanay Jat 1");
-                    arrayList_Jat_K.add("Kad Dhanay Jat 2");
-                    arrayList_Jat_K.add("Kad Dhanay Jat 3");
+                if (position==1) {
 
-                    adapter_Jat=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,arrayList_Jat_K);
-                    sp_Select_Bazar_Option_2.setAdapter(adapter_Jat);
+                    list_prodect_kd.add("Bajery");
+                    list_prodect_kd.add("Gehu");
+                    list_prodect_kd.add("Jwary");
+
+                    adapter_prodect=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,list_prodect_kd);
+                    spChoiceProdect.setAdapter(adapter_prodect);
+
                 }
-                if (position==2)
-                {
+                if (position==2) {
 
-                    // choice of Bhaji Jat
-                    arrayList1_Jat_B.add("Bhaji Jat 1");
-                    arrayList1_Jat_B.add("Bhaji Jat 2");
-                    arrayList1_Jat_B.add("Bhaji Jat 3");
+                    list_prodect_b.add("Mathi");
+                    list_prodect_b.add("Dhana");
+                    list_prodect_b.add("Kakedi");
 
-                    adapter_Jat=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,arrayList1_Jat_B);
-                    sp_Select_Bazar_Option_2.setAdapter(adapter_Jat);
+                    adapter_prodect=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,list_prodect_b);
+                    spChoiceProdect.setAdapter(adapter_prodect);
+
+
                 }
-                if (position==3)
-                {
-                    // choice of Phale Jat
-                    arrayList1_Jat_P.add("Phale Jat 1");
-                    arrayList1_Jat_P.add("Phale Jat 2");
-                    arrayList1_Jat_P.add("Phale Jat 3");
+                if (position==3) {
 
-                    adapter_Jat=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,arrayList1_Jat_P);
-                    sp_Select_Bazar_Option_2.setAdapter(adapter_Jat);
+                    list_prodect_p.add("Keli");
+                    list_prodect_p.add("Chiku");
+                    list_prodect_p.add("Paru");
+
+                    adapter_prodect=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,list_prodect_p);
+                    spChoiceProdect.setAdapter(adapter_prodect);
+
+
                 }
+
             }
 
             @Override
@@ -119,12 +130,11 @@ public class Bazar extends Fragment {
             }
         });
 
-        sp_Select_Bazar_Option_2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spChoiceProdect.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                positionJat=position;
-
+                prodect=position;
             }
 
             @Override
@@ -133,57 +143,65 @@ public class Bazar extends Fragment {
             }
         });
 
-        // this is code going sale opetion
+
+
         btn_Bazar_Sale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (positionKBP==0)
-                {
-                    Toast.makeText(getContext(),"Plz select ani option",Toast.LENGTH_LONG).show();
-                } else
-                    {
+                if (positionKBP==0) {
+
+                    Toast.makeText(getContext(),"PLZ Select ani opetion",Toast.LENGTH_LONG).show();
+
+                }
+                else {
 
                     Bundle bundle=new Bundle();
 
                     bundle.putInt("positionKBP",positionKBP);
-                    bundle.putInt("positionJat",positionJat);
+                    bundle.putInt("prodect",prodect);
 
-                    Intent intent=new Intent(view.getContext(),Bazar_Saling_Activity.class);
+                    Intent intent=new Intent(getContext(),Bazar_Saling_Activity.class);
                     intent.putExtras(bundle);
-
                     startActivity(intent);
-
                 }
+
+
             }
         });
 
 
-        // this code going bay opetion
         btn_Bazar_Bay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (positionKBP==0)
-                {
-                    Toast.makeText(getContext(),"Plz select ani option",Toast.LENGTH_LONG).show();
-                } else
-                {
+                if (positionKBP==0) {
+
+                    Toast.makeText(getContext(),"PLZ Select ani opetion",Toast.LENGTH_LONG).show();
+
+                }
+                else {
 
                     Bundle bundle=new Bundle();
 
                     bundle.putInt("positionKBP",positionKBP);
-                    bundle.putInt("positionJat",positionJat);
+                    bundle.putInt("positionProdect",prodect);
 
-                    Intent intent=new Intent(view.getContext(), Bazar_Baying_Activity.class);
+                    Intent intent=new Intent(getContext(),Bazar_Baying_Activity.class);
                     intent.putExtras(bundle);
-
                     startActivity(intent);
-
                 }
 
             }
         });
+
+
+
+
+
+
+
+
 
 
         return view;

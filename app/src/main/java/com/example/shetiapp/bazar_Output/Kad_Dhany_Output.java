@@ -16,6 +16,19 @@ import com.example.shetiapp.R;
  */
 public class Kad_Dhany_Output extends Fragment {
 
+    private int positionKBP;
+    private int prodect;
+
+    public Kad_Dhany_Output(int positionKBP, int prodect) {
+        this.positionKBP = positionKBP;
+        this.prodect = prodect;
+    }
+
+    public Kad_Dhany_Output(int contentLayoutId, int positionKBP, int prodect) {
+        super(contentLayoutId);
+        this.positionKBP = positionKBP;
+        this.prodect = prodect;
+    }
 
     public Kad_Dhany_Output() {
         // Required empty public constructor

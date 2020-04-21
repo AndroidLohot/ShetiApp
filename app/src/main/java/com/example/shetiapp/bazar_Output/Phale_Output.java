@@ -17,6 +17,20 @@ import com.example.shetiapp.R;
 public class Phale_Output extends Fragment {
 
 
+    private int positionKBP;
+    private int prodect;
+
+    public Phale_Output(int positionKBP, int prodect) {
+        this.positionKBP = positionKBP;
+        this.prodect = prodect;
+    }
+
+    public Phale_Output(int contentLayoutId, int positionKBP, int prodect) {
+        super(contentLayoutId);
+        this.positionKBP = positionKBP;
+        this.prodect = prodect;
+    }
+
     public Phale_Output() {
         // Required empty public constructor
     }

@@ -16,16 +16,16 @@ import com.example.shetiapp.R;
  */
 public class Kad_Dhany_Input extends Fragment {
 
-    private int positionJat;
+    private int prodect;
 
 
     public Kad_Dhany_Input() {
         // Required empty public constructor
     }
 
-    public Kad_Dhany_Input(int positionJat) {
+    public Kad_Dhany_Input(int prodect) {
 
-        this.positionJat=positionJat;
+        this.prodect=prodect;
     }
 
 
