@@ -60,7 +60,9 @@ public class Bazar_Show_List extends Fragment {
 
         inView(view);
 
-        arrayList.add("yogesh");
+        arrayList.add("Vikas");
+        arrayList.add("Dhanesh");
+        arrayList.add("Yogesh");
 
 
 
