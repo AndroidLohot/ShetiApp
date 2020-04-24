@@ -8,6 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.example.shetiapp.R;
 
@@ -16,7 +22,32 @@ import com.example.shetiapp.R;
  */
 public class Bhaji_Input extends Fragment {
 
-    private int prodect;
+    private int product;
+
+    // creating verifiables
+    private EditText edOwnerName,edKG,edJodi, edPrice;
+    private CheckBox cbGrupe,cbGaow,cbAll;
+    private RadioGroup  rgProductWeight;
+    private TextView tvSetPrices;
+    private ImageButton imBtnIP;
+    private Button btnSeling;
+
+    private void inView(View view) {
+
+        tvSetPrices=view.findViewById(R.id.tvSelingShowSetPrices);
+
+        edOwnerName=view.findViewById(R.id.ed_SelingOwnerName);
+        edKG=view.findViewById(R.id.ed_SelingKG);
+        edJodi=view.findViewById(R.id.ed_SelingJodi);
+        edPrice=view.findViewById(R.id.ed_SelingPrices);
+
+
+        cbGrupe=view.findViewById(R.id.cbSelingGroup);
+        cbGaow=view.findViewById(R.id.cbSelingGaow);
+        cbAll=view.findViewById(R.id.cbSelingAll);
+
+        rgProductWeight=view.findViewById(R.id.rgProductWeight);
+    }
 
 
     public Bhaji_Input() {
@@ -25,7 +56,7 @@ public class Bhaji_Input extends Fragment {
 
     public Bhaji_Input(int prodect) {
 
-        this.prodect=prodect;
+        this.product=prodect;
     }
 
 
@@ -33,7 +64,9 @@ public class Bhaji_Input extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bhaji__input, container, false);
+        View view= inflater.inflate(R.layout.fragment_bhaji__input, container, false);
+
+        return view;
     }
 
 }

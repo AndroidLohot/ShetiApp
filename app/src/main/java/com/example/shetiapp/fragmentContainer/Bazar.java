@@ -15,8 +15,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.shetiapp.Activitys.Bazar_Baying_Activity;
-import com.example.shetiapp.Activitys.Bazar_Saling_Activity;
+import com.example.shetiapp.Activitys.Bazaar_SBU_Activitys.Bazar_Baying_Activity;
+import com.example.shetiapp.Activitys.Bazaar_SBU_Activitys.Bazar_Saling_Activity;
 import com.example.shetiapp.R;
 
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class Bazar extends Fragment {
 
     // this variable containing the spinner position
     private int positionKBP;
-    private int prodect;
+    private int product;
 
 
     public Bazar() {
@@ -87,6 +87,7 @@ public class Bazar extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
+                // this positionKDP is contan value of category product
                 positionKBP=position;
 
                 if (position==1) {
@@ -134,7 +135,8 @@ public class Bazar extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                prodect=position;
+                // product is contan value of product
+                product=position;
             }
 
             @Override
@@ -158,8 +160,10 @@ public class Bazar extends Fragment {
 
                     Bundle bundle=new Bundle();
 
+                    // this bundle passing index of Bazar_Saling activity
+
                     bundle.putInt("positionKBP",positionKBP);
-                    bundle.putInt("prodect",prodect);
+                    bundle.putInt("product",product);
 
                     Intent intent=new Intent(getContext(),Bazar_Saling_Activity.class);
                     intent.putExtras(bundle);
@@ -184,8 +188,10 @@ public class Bazar extends Fragment {
 
                     Bundle bundle=new Bundle();
 
+                    // this bundle passing index of Bazar_Baying activity
+
                     bundle.putInt("positionKBP",positionKBP);
-                    bundle.putInt("positionProdect",prodect);
+                    bundle.putInt("positionProdect",product);
 
                     Intent intent=new Intent(getContext(),Bazar_Baying_Activity.class);
                     intent.putExtras(bundle);

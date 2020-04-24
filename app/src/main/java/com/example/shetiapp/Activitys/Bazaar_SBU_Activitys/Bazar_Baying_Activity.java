@@ -1,4 +1,4 @@
-package com.example.shetiapp.Activitys;
+package com.example.shetiapp.Activitys.Bazaar_SBU_Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -20,24 +20,15 @@ public class Bazar_Baying_Activity extends AppCompatActivity {
 
         Bundle bundle=getIntent().getExtras();
 
-        positionKBP=bundle.getInt("positionKBP");
-        positionProdect=bundle.getInt("prodect");
+        // this getting value of bazaar fragment
+        // the positionKBP contan index of category in product
+        // the product contan product index
+        int positionKBP=bundle.getInt("positionKBP");
+        int prodect=bundle.getInt("product");
 
         FragmentTransaction ft=getSupportFragmentManager().beginTransaction()
                 .replace(R.id.main_Baying_Frame,new Bazar_Show_List(positionKBP,positionProdect));
         ft.commit();
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

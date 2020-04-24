@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Bazaar_SBU_Activitys.Bazar_Saling_Activity">
+    tools:context=".Activitys.Bazaar_SBU_Activitys.Bazaar_Update_Activity">
 
     <FrameLayout
-        android:id="@+id/main_bazar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

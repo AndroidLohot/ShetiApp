@@ -1,4 +1,4 @@
-package com.example.shetiapp.Activitys;
+package com.example.shetiapp.Activitys.Bazaar_SBU_Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -20,8 +20,11 @@ public class Bazar_Saling_Activity extends AppCompatActivity {
 
         Bundle bundle=getIntent().getExtras();
 
+        // this getting value of bazaar fragment
+        // the positionKBP contan index of category in ed_SelingOwnerName
+        // the product contan product index
         int positionKBP=bundle.getInt("positionKBP");
-        int prodect=bundle.getInt("prodect");
+        int prodect=bundle.getInt("product");
 
 
 

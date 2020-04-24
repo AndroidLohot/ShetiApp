@@ -1,4 +1,4 @@
-package com.example.shetiapp.bazar_input;
+package com.example.shetiapp.bazar_input.UpdateInputBazaar;
 
 
 import android.os.Bundle;
@@ -14,18 +14,11 @@ import com.example.shetiapp.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Phale_Input extends Fragment {
-
-    private int product ;
+public class UpdateBhaji extends Fragment {
 
 
-    public Phale_Input() {
+    public UpdateBhaji() {
         // Required empty public constructor
-    }
-
-    public Phale_Input(int product) {
-
-        this.product =product;
     }
 
 
@@ -33,7 +26,7 @@ public class Phale_Input extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_phale__input, container, false);
+        View view=inflater.inflate(R.layout.fragment_update_bhaji_input, container, false);
 
         return view;
     }

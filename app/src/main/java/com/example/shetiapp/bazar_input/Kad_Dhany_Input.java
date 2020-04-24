@@ -33,7 +33,9 @@ public class Kad_Dhany_Input extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_kad__dhany__input, container, false);
+        View view=inflater.inflate(R.layout.fragment_kad__dhany__input, container, false);
+
+        return view;
     }
 
 }
